@@ -4,11 +4,9 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <com.xinfu.demo3.PersonRelationView
-        android:id="@+id/pr"
+    <com.xinfu.demo3.PersonRelativeLayout
+        android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
         android:background="#666666"/>
 </LinearLayout>
