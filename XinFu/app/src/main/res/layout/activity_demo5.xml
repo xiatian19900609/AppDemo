@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffee00"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        >
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签到"/>
+
+        <TextView
+            android:id="@+id/tvCurrentMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="11月"
+            android:textColor="#323232"
+            android:textSize="22sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#666666"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                style="@style/dateStyle"
+                android:text="@string/sunday"
+                android:textColor="@color/canlendar_text_color"/>
+
+            <TextView
+                style="@style/dateStyle"
+                android:text="@string/monday"
+                android:textColor="@color/canlendar_text_color"/>
+
+            <TextView
+                style="@style/dateStyle"
+                android:text="@string/thesday"
+                android:textColor="@color/canlendar_text_color"/>
+
+            <TextView
+                style="@style/dateStyle"
+                android:text="@string/wednesday"
+                android:textColor="@color/canlendar_text_color"/>
+
+            <TextView
+                style="@style/dateStyle"
+                android:text="@string/thursday"
+                android:textColor="@color/canlendar_text_color"/>
+
+            <TextView
+                style="@style/dateStyle"
+                android:text="@string/friday"
+                android:textColor="@color/canlendar_text_color"/>
+
+            <TextView
+                style="@style/dateStyle"
+                android:text="@string/saturday"
+                android:textColor="@color/canlendar_text_color"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/ll_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical">
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

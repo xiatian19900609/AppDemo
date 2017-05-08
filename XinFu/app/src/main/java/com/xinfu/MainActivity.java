@@ -13,6 +13,7 @@ import android.widget.Button;
 import com.xinfu.demo1.Demo1Activity;
 import com.xinfu.demo2.Demo2Activity;
 import com.xinfu.demo3.Demo3Activity;
+import com.xinfu.demo5.Demo5Activity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     Button btn2;
     @InjectView(R.id.btn3)
     Button btn3;
+    @InjectView(R.id.btn5)
+    Button btn5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Demo3Activity.class));
+            }
+        });
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Demo5Activity.class));
             }
         });
         requestLocalPermission();
