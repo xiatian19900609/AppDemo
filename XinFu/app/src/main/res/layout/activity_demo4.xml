@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_unAudit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_unAudit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="待我审核(0)"
+                android:textColor="@color/text_gray_red_selector"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/v_unAudit"
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="@drawable/line_red_white_selector"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_audit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_audit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="我已审核"
+                android:textColor="@color/text_gray_red_selector"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/v_audit"
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="@drawable/line_red_white_selector"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc"/>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+</LinearLayout>

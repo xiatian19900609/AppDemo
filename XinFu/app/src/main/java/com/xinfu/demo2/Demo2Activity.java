@@ -40,7 +40,6 @@ public class Demo2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_demo1);
         ButterKnife.inject(this);
         initDatas();
-
     }
 
     private void initDatas() {

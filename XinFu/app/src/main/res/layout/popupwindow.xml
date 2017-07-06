@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/home_popuwindow_bg"
+              android:orientation="vertical"
+              android:padding="5dp">
+
+    <TextView
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="有5张卡券即将过期"
+        android:textColor="#ffffff"
+        android:textSize="14sp"/>
+</LinearLayout>

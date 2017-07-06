@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zy_dimen_10">10dip</dimen>
+    <dimen name="zy_dimen_15">15dip</dimen>
+    <dimen name="zy_dimen_5">5dip</dimen>
+    <dimen name="zy_dimen_8">8dip</dimen>
+    <dimen name="zy_dimen_20">20dip</dimen>
+    <dimen name="zy_dimen_2">2dip</dimen>
+    <dimen name="zy_dimen_40">40dip</dimen>
+    <dimen name="zy_dimen_42">42dip</dimen>
+    <dimen name="zy_dimen_100">100dip</dimen>
+    <dimen name="zy_dimen_130">130dip</dimen>
+    <dimen name="zy_dimen_155">155dip</dimen>
+    <dimen name="zy_dimen_355">355dip</dimen>
+    <dimen name="zy_dimen_25">25dip</dimen>
+    <dimen name="money_size">70sp</dimen>
+
+    <dimen name="size_18">18sp</dimen>
+    <dimen name="size_14">14sp</dimen>
+    <dimen name="size_12">12sp</dimen>
+    <dimen name="size_10">10sp</dimen>
+    <dimen name="size_15">15sp</dimen>
+    <dimen name="size_16">16sp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">15dp</dimen>
+    <dimen name="header_height">70dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

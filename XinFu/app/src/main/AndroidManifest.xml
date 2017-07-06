@@ -20,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name=".demo1.Demo1Activity"
             android:configChanges="orientation|keyboardHidden|navigation"
@@ -34,9 +33,31 @@
             android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".demo4.Demo4Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".demo5.Demo5Activity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo6.Demo6Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo7.Demo7Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo8.Demo8Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo9.Demo9Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:label="@string/title_activity_demo9"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

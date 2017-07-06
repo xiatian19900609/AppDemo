@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/main"
+              android:orientation="vertical">
+
+    <com.xinfu.demo6.ClearEditText
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="60dp"
+        android:drawableLeft="@drawable/user_name_icon"
+        android:drawableRight="@drawable/del_icon"
+        android:hint="输入用户名"
+        android:singleLine="true">
+
+    </com.xinfu.demo6.ClearEditText>
+
+    <com.xinfu.demo6.ClearEditText
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="60dp"
+        android:drawableLeft="@drawable/user_name_icon"
+        android:drawableRight="@drawable/del_icon"
+        android:hint="输入密码"
+        android:singleLine="true">
+
+    </com.xinfu.demo6.ClearEditText>
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/line_red_white_selector"
+        android:text="登录"/>
+</LinearLayout>

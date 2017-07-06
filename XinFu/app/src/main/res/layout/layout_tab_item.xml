@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="35dp"
+        android:layout_height="25dp">
+
+        <ImageView
+            android:id="@+id/iv_tab_icon"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            tools:src="@drawable/home_user_normal"
+            />
+
+        <ImageView
+            android:id="@+id/iv_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/hot"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/point_red"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@id/tv_tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_tab_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/zy_dimen_5"
+        tools:text="竞猜"
+        android:textSize="@dimen/size_10"/>
+
+</LinearLayout>

@@ -8,4 +8,8 @@
     <string name="thursday">四</string>
     <string name="friday">五</string>
     <string name="saturday">六</string>
+    <string name="title_activity_demo9">Demo9Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
