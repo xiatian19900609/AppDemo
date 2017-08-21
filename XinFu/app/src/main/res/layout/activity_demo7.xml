@@ -13,6 +13,12 @@
         android:layout_alignParentBottom="true"
         android:background="@color/btn_yellow1"/>
 
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabLayout"/>
+
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
@@ -40,27 +46,12 @@
         android:layout_below="@id/btn2"
         android:text="隐藏hot"/>
 
-    <TextView
-        android:id="@+id/tv"
+    <Button
+        android:id="@+id/btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        />
+        android:layout_below="@id/btn3"
+        android:text="reset"/>
 
-    <TextView
-        android:id="@+id/tvZyCouponTip"
-        android:layout_width="wrap_content"
-        android:layout_height="28dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="50dp"
-        android:layout_marginRight="25dp"
-        android:background="@drawable/home_popuwindow_bg"
-        android:gravity="center"
-        android:paddingLeft="@dimen/zy_dimen_10"
-        android:paddingRight="@dimen/zy_dimen_10"
-        android:text="新增2张卡券"
-        android:textColor="#ffffff"
-        android:textSize="14sp"
-        android:visibility="gone"/>
+
 </RelativeLayout>

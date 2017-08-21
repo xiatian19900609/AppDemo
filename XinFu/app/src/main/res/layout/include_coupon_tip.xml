@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="28dp"
+    android:background="@drawable/home_popuwindow_bg"
+    android:gravity="center"
+    android:paddingLeft="@dimen/zy_dimen_10"
+    android:paddingRight="@dimen/zy_dimen_10"
+    android:textColor="#ffffff"
+    android:textSize="14sp"
+    android:visibility="visible"
+    />

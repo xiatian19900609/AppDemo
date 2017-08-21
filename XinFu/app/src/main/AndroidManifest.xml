@@ -56,8 +56,26 @@
             android:name=".demo9.Demo9Activity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:label="@string/title_activity_demo9"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo12.Demo12C"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo13.Demo13Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo11.Demo11Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".demo10.Demo10Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"/>
+
     </application>
 
 </manifest>

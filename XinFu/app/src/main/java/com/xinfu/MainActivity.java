@@ -12,6 +12,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.xinfu.demo1.Demo1Activity;
+import com.xinfu.demo10.Demo10Activity;
+import com.xinfu.demo11.Demo11Activity;
+import com.xinfu.demo12.Demo12C;
+import com.xinfu.demo13.Demo13Activity;
 import com.xinfu.demo2.Demo2Activity;
 import com.xinfu.demo3.Demo3Activity;
 import com.xinfu.demo4.Demo4Activity;
@@ -46,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
     TextView tv;
     @InjectView(R.id.btn9)
     Button btn9;
+    @InjectView(R.id.btn10)
+    Button btn10;
+    @InjectView(R.id.btn11)
+    Button btn11;
+    @InjectView(R.id.btn12)
+    Button btn12;
+    @InjectView(R.id.btn13)
+    Button btn13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +122,34 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Demo9Activity.class));
             }
         });
+        btn10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Demo10Activity.class));
+            }
+        });
+        btn11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo11Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo12C.class);
+                startActivity(intent);
+            }
+        });
+        btn13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo13Activity.class);
+                startActivity(intent);
+            }
+        });
+
         requestLocalPermission();
     }
 

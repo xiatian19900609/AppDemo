@@ -1,9 +1,11 @@
 package com.xinfu.demo7;
 
+import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -43,12 +45,12 @@ public class Demo7Activity extends AppCompatActivity {
     RelativeLayout rlContent;
     @InjectView(R.id.btn1)
     Button btn1;
-    @InjectView(R.id.tv)
-    TextView tv;
     @InjectView(R.id.btn2)
     Button btn2;
     @InjectView(R.id.btn3)
     Button btn3;
+    @InjectView(R.id.btn4)
+    Button btn4;
 
     private String[] mTabTitles = {"大厅", "竞猜", "爆料", "比分", "我的"};
     //
@@ -62,18 +64,27 @@ public class Demo7Activity extends AppCompatActivity {
     private static final String TAG = "Demo7Activity";
     @InjectView(R.id.btn)
     Button btn;
-    @InjectView(R.id.tvZyCouponTip)
-    TextView tvZyCouponTip;
     @InjectView(R.id.tabLayout)
     TabLinearLayout tabLayout;
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private PopupOrderPriceDetail mPriceDetail;
+    private int mWidth;
+    private TextView mTvZyCouponTip;
+    private Demo7Fragment mFragment1;
+    private Demo7Fragment mFragment2;
+    private Demo7Fragment mFragment3;
+    private Demo7Fragment mFragment4;
+    private Demo7Fragment mFragment5;
+    private FragmentManager mFm;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo7);
         ButterKnife.inject(this);
+        mFm = getSupportFragmentManager();
+        initFragment();
+
 
         for (int i = 0; i < mTabTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTabTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
@@ -82,7 +93,7 @@ public class Demo7Activity extends AppCompatActivity {
         tabLayout.setOnTabSelectListener(new TabLinearLayout.OnTabSelectListener() {
             @Override
             public void onTabSelect(int position) {
-                tv.setText(mTabTitles[position]);
+                swtichFragment(position);
             }
 
             @Override
@@ -90,8 +101,10 @@ public class Demo7Activity extends AppCompatActivity {
 
             }
         });
+        swtichFragment(0);
+
+
         tabLayout.showHot(1);
-        tabLayout.setCurrentTab(0);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,6 +130,46 @@ public class Demo7Activity extends AppCompatActivity {
                 tabLayout.hideHot(1);
             }
         });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
+    }
+
+    private void initFragment() {
+        mFragment1 = Demo7Fragment.newInstance("大厅");
+        mFragment2 = Demo7Fragment.newInstance("竞猜");
+        mFragment3 = Demo7Fragment.newInstance("爆料");
+        mFragment4 = Demo7Fragment.newInstance("比分");
+        mFragment5 = Demo7Fragment.newInstance("我的");
+        mFm.beginTransaction().add(R.id.framelayout, mFragment1)
+                .add(R.id.framelayout, mFragment2).add(R.id.framelayout, mFragment3)
+                .add(R.id.framelayout, mFragment4).add(R.id.framelayout, mFragment5).commitAllowingStateLoss();
+    }
+
+
+    private void swtichFragment(int position) {
+        tabLayout.setCurrentTab(position);
+        switch (position) {
+            case 0:
+                mFm.beginTransaction().hide(mFragment2).hide(mFragment3).hide(mFragment4).hide(mFragment5).show(mFragment1).commitAllowingStateLoss();
+                break;
+            case 1:
+                mFm.beginTransaction().hide(mFragment1).hide(mFragment3).hide(mFragment4).hide(mFragment5).show(mFragment2).commitAllowingStateLoss();
+                break;
+            case 2:
+                mFm.beginTransaction().hide(mFragment2).hide(mFragment1).hide(mFragment4).hide(mFragment5).show(mFragment3).commitAllowingStateLoss();
+                break;
+            case 3:
+                mFm.beginTransaction().hide(mFragment2).hide(mFragment3).hide(mFragment1).hide(mFragment5).show(mFragment4).commitAllowingStateLoss();
+                break;
+            case 4:
+                mFm.beginTransaction().hide(mFragment2).hide(mFragment3).hide(mFragment4).hide(mFragment1).show(mFragment5).commitAllowingStateLoss();
+                break;
+
+        }
     }
 
     private void init() {
@@ -142,9 +195,18 @@ public class Demo7Activity extends AppCompatActivity {
      * 显示卡券气泡弹框
      */
     private void showCouponTip() {
+        tabLayout.hideDot(4);
+        mTvZyCouponTip = (TextView) View.inflate(this, R.layout.include_coupon_tip, null);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        params.bottomMargin = DensityUtils.dp2px(this, 50);
+        params.rightMargin = DensityUtils.dp2px(this, 22);
+        mTvZyCouponTip.setText("有2张卡券即将过期");
+        rlContent.addView(mTvZyCouponTip, params);
+
         Animation animationScale = AnimationUtils.loadAnimation(this, R.anim.anim_scale);
-        tvZyCouponTip.setVisibility(View.VISIBLE);
-        tvZyCouponTip.setAnimation(animationScale);
+        mTvZyCouponTip.setAnimation(animationScale);
         animationScale.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -171,21 +233,22 @@ public class Demo7Activity extends AppCompatActivity {
         animationScale.start();
     }
 
-
     /**
      * 隐藏卡券气泡弹框
      */
     private void hideCouponTip() {
-        int width = tvZyCouponTip.getWidth();
+        mWidth = mTvZyCouponTip.getWidth();
+        ObjectAnimator cornerAnimation =
+                ObjectAnimator.ofFloat(mTvZyCouponTip, "cornerRadius", 15.0f, 200.0f);
+        android.animation.Animator scaleAnimation = AnimatorInflater.loadAnimator(this, R.animator.coupontipscale);
+        scaleAnimation.setTarget(mTvZyCouponTip);
         ObjectAnimator shiftAnimation =
-                ObjectAnimator.ofFloat(tvZyCouponTip, "translationX", 0, width / 2.8f);
+                ObjectAnimator.ofFloat(mTvZyCouponTip, "translationX", 0, mWidth / 2.8f);
         ObjectAnimator shiftYAnimation =
-                ObjectAnimator.ofFloat(tvZyCouponTip, "translationY", 0, 10);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(tvZyCouponTip, "scaleX", 1f, 0.03f);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(tvZyCouponTip, "scaleY", 1f, 0.17f);
+                ObjectAnimator.ofFloat(mTvZyCouponTip, "translationY", 0, 10);
         AnimatorSet set = new AnimatorSet();
         set.setDuration(1000);
-        set.playTogether(shiftAnimation, shiftYAnimation, scaleX, scaleY);
+        set.playTogether(shiftAnimation, shiftYAnimation, scaleAnimation, cornerAnimation);
         set.addListener(new android.animation.Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(android.animation.Animator animator) {
@@ -205,7 +268,7 @@ public class Demo7Activity extends AppCompatActivity {
                 if (resourceId > 0) {
                     statusBarHeight1 = getResources().getDimensionPixelSize(resourceId);
                 }
-                ArcAnimator arcAnimator = ArcAnimator.createArcAnimator(tvZyCouponTip, i + width / 2,
+                ArcAnimator arcAnimator = ArcAnimator.createArcAnimator(mTvZyCouponTip, i + width / 2,
                         j + width / 2 - statusBarHeight1, 30, Side.RIGHT)
                         .setDuration(1000);
                 arcAnimator.addListener(new Animator.AnimatorListener() {
@@ -216,10 +279,10 @@ public class Demo7Activity extends AppCompatActivity {
 
                     @Override
                     public void onAnimationEnd(Animator animation) {
-                        tvZyCouponTip.clearAnimation();
-                        tvZyCouponTip.invalidate();
-                        tvZyCouponTip.setVisibility(View.INVISIBLE);
+                        mTvZyCouponTip.clearAnimation();
+                        mTvZyCouponTip.invalidate();
                         tabLayout.showDot(4);
+                        rlContent.removeView(mTvZyCouponTip);
                     }
 
                     @Override
