@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:padding="@dimen/zy_dimen_10"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/zy_dimen_100"
+            android:layout_height="match_parent"
+            android:background="@color/color_e82c2c"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_icon"
+            android:text="我是标题我是标题"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_18"
+            />
+
+        <TextView
+            android:id="@+id/tv_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/iv_icon"
+            android:text="已获50积分"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/size_12"/>
+
+        <Button
+            android:id="@+id/btn_again_evaluate"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_red_bg"
+            android:text="追加评价"
+            android:textColor="@color/color_e82c2c"
+            android:textSize="@dimen/size_12"/>
+
+        <Button
+            android:id="@+id/btn_look_evaluate"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_again_evaluate"
+            android:background="@drawable/btn_black_bg"
+            android:text="查看评价"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_12"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

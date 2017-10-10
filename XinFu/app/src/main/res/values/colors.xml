@@ -8,4 +8,10 @@
     <color name="color_e82c2c">#e82c2c</color>
     <color name="btn_yellow1">#ffd66f</color>
     <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_f0f0f0">#f0f0f0</color>
+    <color name="black">#000000</color>
+    <color name="gray">#666666</color>
+    <color name="transparentBlack">#66000000</color>
 </resources>

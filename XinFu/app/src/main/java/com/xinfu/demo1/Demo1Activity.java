@@ -2,9 +2,11 @@ package com.xinfu.demo1;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
+import android.widget.TextView;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
@@ -30,6 +32,7 @@ public class Demo1Activity extends AppCompatActivity {
     @InjectView(R.id.xRecylerView)
     XRecyclerView xRecylerView;
     ConvenientBanner mConvenientBanner;
+    private TextView mTv;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -77,6 +80,7 @@ public class Demo1Activity extends AppCompatActivity {
         });
         View headerView = View.inflate(this, R.layout.banner, null);
         mConvenientBanner = (ConvenientBanner) headerView.findViewById(R.id.convenientBanner);
+        mTv = (TextView) headerView.findViewById(R.id.tv);
         ArrayList<String> list = new ArrayList<>();
         list.add("http://8win-test.oss-cn-beijing.aliyuncs.com//cms/image/all/2016/11/18/5c2976ce-acec-410f-a27b-7056a68e5661.jpg");
         list.add("http://8win-test.oss-cn-beijing.aliyuncs.com//cms/image/all/2017/2/7/dbef47c3-4698-4d0f-8511-8907bdd875b5.png");
@@ -89,7 +93,7 @@ public class Demo1Activity extends AppCompatActivity {
 
     private void initBanner(final List<String> banners) {
         if (banners != null && banners.size() > 0) {
-
+            mTv.setText(String.valueOf(0));
             mConvenientBanner.setPages(new CBViewHolderCreator<BannerImageHolderView>() {
                 @Override
                 public BannerImageHolderView createHolder() {
@@ -97,7 +101,23 @@ public class Demo1Activity extends AppCompatActivity {
                 }
             }, banners)
                     .setPageIndicator(new int[]{R.drawable.play_hide, R.drawable.play_display})
-                    .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL)
+                    .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.ALIGN_PARENT_RIGHT)
+                    .setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                        @Override
+                        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                        }
+
+                        @Override
+                        public void onPageSelected(int position) {
+                            mTv.setText(String.valueOf(position));
+                        }
+
+                        @Override
+                        public void onPageScrollStateChanged(int state) {
+
+                        }
+                    })
                     .setOnItemClickListener(new OnItemClickListener() {
                         @Override
                         public void onItemClick(int position) {

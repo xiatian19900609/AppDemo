@@ -16,6 +16,12 @@ import com.xinfu.demo10.Demo10Activity;
 import com.xinfu.demo11.Demo11Activity;
 import com.xinfu.demo12.Demo12C;
 import com.xinfu.demo13.Demo13Activity;
+import com.xinfu.demo14.Demo14Activity;
+import com.xinfu.demo15.Demo15Activity;
+import com.xinfu.demo16.Demo16Activity;
+import com.xinfu.demo17.Demo17Activity;
+import com.xinfu.demo18.Demo18ActivityA;
+import com.xinfu.demo19.Demo19Activity;
 import com.xinfu.demo2.Demo2Activity;
 import com.xinfu.demo3.Demo3Activity;
 import com.xinfu.demo4.Demo4Activity;
@@ -58,6 +64,18 @@ public class MainActivity extends AppCompatActivity {
     Button btn12;
     @InjectView(R.id.btn13)
     Button btn13;
+    @InjectView(R.id.btn14)
+    Button btn14;
+    @InjectView(R.id.btn15)
+    Button btn15;
+    @InjectView(R.id.btn16)
+    Button btn16;
+    @InjectView(R.id.btn17)
+    Button btn17;
+    @InjectView(R.id.btn18)
+    Button btn18;
+    @InjectView(R.id.btn19)
+    Button btn19;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,6 +164,48 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Demo13Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo14Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo15Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo16Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo17Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo18ActivityA.class);
+                startActivity(intent);
+            }
+        });
+        btn19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo19Activity.class);
                 startActivity(intent);
             }
         });

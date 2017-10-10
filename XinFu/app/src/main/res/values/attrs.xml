@@ -7,4 +7,14 @@
         <attr name="cornerRadius" format="float"/>
         <attr name="halfBaseOfLeg" format="dimension"/>
     </declare-styleable>
+
+
+    <declare-styleable name="SideIndexBar">
+        <attr name="letterSize" format="dimension"/>
+        <attr name="letterColor" format="color"/>
+        <attr name="selectLetterColor" format="color"/>
+        <attr name="selectBackground" format="reference|color"/>
+        <attr name="isBoldface" format="boolean"/>
+        <attr name="isLetterCenter" format="boolean"/>
+    </declare-styleable>
 </resources>

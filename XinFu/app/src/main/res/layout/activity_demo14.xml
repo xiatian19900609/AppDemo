@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="緩存"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zy_dimen_42"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_unevaluate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_unevaluate"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="待评价(0)"
+                android:textColor="@color/text_gray_black_selector"
+                android:textSize="@dimen/size_16"/>
+
+            <View
+                android:id="@+id/v_unevaluate"
+                android:layout_width="@dimen/zy_dimen_100"
+                android:layout_height="1dp"
+                android:background="@drawable/line_black_gray_selector"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_evaluated"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_evaluated"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="已评价(0)"
+                android:textColor="@color/text_gray_black_selector"
+                android:textSize="@dimen/size_16"/>
+
+            <View
+                android:id="@+id/v_evaluated"
+                android:layout_width="@dimen/zy_dimen_100"
+                android:layout_height="1dp"
+                android:background="@drawable/line_black_gray_selector"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f0f0f0"
+        android:paddingLeft="@dimen/zy_dimen_10"
+        android:paddingRight="@dimen/zy_dimen_10"/>
+</LinearLayout>
