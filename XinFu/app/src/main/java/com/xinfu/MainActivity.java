@@ -20,9 +20,10 @@ import com.xinfu.demo14.Demo14Activity;
 import com.xinfu.demo15.Demo15Activity;
 import com.xinfu.demo16.Demo16Activity;
 import com.xinfu.demo17.Demo17Activity;
-import com.xinfu.demo18.Demo18ActivityA;
+import com.xinfu.demo18.Demo18ActivityB;
 import com.xinfu.demo19.Demo19Activity;
 import com.xinfu.demo2.Demo2Activity;
+import com.xinfu.demo20.Demo20Activity;
 import com.xinfu.demo3.Demo3Activity;
 import com.xinfu.demo4.Demo4Activity;
 import com.xinfu.demo5.Demo5Activity;
@@ -76,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
     Button btn18;
     @InjectView(R.id.btn19)
     Button btn19;
+    @InjectView(R.id.btn20)
+    Button btn20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
         btn18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Demo18ActivityA.class);
+                Intent intent = new Intent(MainActivity.this, Demo18ActivityB.class);
                 startActivity(intent);
             }
         });
@@ -206,6 +209,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Demo19Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo20Activity.class);
                 startActivity(intent);
             }
         });

@@ -86,7 +86,15 @@
             android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".demo18.Demo18ActivityB"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".demo19.Demo19Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo20.Demo20Activity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="portrait"/>
         <activity

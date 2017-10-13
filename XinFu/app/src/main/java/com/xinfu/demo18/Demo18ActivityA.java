@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Fade;
+import android.transition.Slide;
 
 import com.xinfu.R;
 
@@ -32,6 +34,7 @@ public class Demo18ActivityA extends AppCompatActivity {
         ButterKnife.inject(this);
         init();
         initRecyclerView();
+        setupWindowAnimations();
     }
 
     private void initRecyclerView() {
@@ -52,4 +55,16 @@ public class Demo18ActivityA extends AppCompatActivity {
         datas.add(dlt);
         datas.add(scdh);
     }
+
+    private void setupWindowAnimations() {
+        Fade fade1 = new Fade();
+        fade1.setDuration(1000);
+        getWindow().setEnterTransition(fade1);
+
+        Slide slide = new Slide();
+        slide.setDuration(1000);
+        getWindow().setReturnTransition(slide);
+    }
+
+
 }
