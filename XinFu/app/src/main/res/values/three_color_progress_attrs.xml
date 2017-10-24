@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ThreeColorProgress">
+        <attr name="tcp_s_color" format="color"/>
+        <attr name="tcp_p_color" format="color"/>
+        <attr name="tcp_f_color" format="color"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="progress_h" format="dimension"/>
+        <attr name="tcp_padding" format="dimension"/>
+    </declare-styleable>
+
+</resources>

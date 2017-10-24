@@ -98,6 +98,22 @@
             android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".demo21.Demo21Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo22.Demo22Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo23.Demo23Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".demo24.Demo24Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".demo11.Demo11Activity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="portrait">
@@ -107,7 +123,8 @@
             android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1"/>
-
+        <activity android:name=".demo23.Main2Activity">
+        </activity>
     </application>
 
 </manifest>

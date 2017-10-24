@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.xinfu.demo21.ThreeColorProgress
+        android:id="@+id/tcp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:progress_h="@dimen/zy_dimen_10"
+        app:tcp_f_color="@color/color_666666"
+        app:tcp_p_color="@color/btn_yellow1"
+        app:tcp_padding="@dimen/zy_dimen_5"
+        app:tcp_s_color="@color/color_e82c2c"
+        app:text_size="@dimen/size_12"/>
+
+
+</LinearLayout>

@@ -24,6 +24,10 @@ import com.xinfu.demo18.Demo18ActivityB;
 import com.xinfu.demo19.Demo19Activity;
 import com.xinfu.demo2.Demo2Activity;
 import com.xinfu.demo20.Demo20Activity;
+import com.xinfu.demo21.Demo21Activity;
+import com.xinfu.demo22.Demo22Activity;
+import com.xinfu.demo23.Demo23Activity;
+import com.xinfu.demo24.Demo24Activity;
 import com.xinfu.demo3.Demo3Activity;
 import com.xinfu.demo4.Demo4Activity;
 import com.xinfu.demo5.Demo5Activity;
@@ -79,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
     Button btn19;
     @InjectView(R.id.btn20)
     Button btn20;
+    @InjectView(R.id.btn21)
+    Button btn21;
+    @InjectView(R.id.btn22)
+    Button btn22;
+    @InjectView(R.id.btn23)
+    Button btn23;
+    @InjectView(R.id.btn24)
+    Button btn24;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -216,6 +228,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Demo20Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo21Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo22Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo23Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn24.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Demo24Activity.class);
                 startActivity(intent);
             }
         });

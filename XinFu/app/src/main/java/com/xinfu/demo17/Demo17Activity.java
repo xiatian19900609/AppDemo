@@ -3,6 +3,8 @@ package com.xinfu.demo17;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xinfu.R;
@@ -21,6 +23,8 @@ public class Demo17Activity extends AppCompatActivity {
     private static final String TAG = "Demo17Activity";
     @InjectView(R.id.timeview)
     TimingView timeview;
+    @InjectView(R.id.tv)
+    TextView tv;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,6 +48,14 @@ public class Demo17Activity extends AppCompatActivity {
                         Toast.makeText(Demo17Activity.this, "300秒", Toast.LENGTH_SHORT).show();
                         break;
                 }
+            }
+        });
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ScoreSettingPopupWindow popupWindow = new ScoreSettingPopupWindow(Demo17Activity.this);
+                popupWindow.showDown(tv);
+
             }
         });
     }

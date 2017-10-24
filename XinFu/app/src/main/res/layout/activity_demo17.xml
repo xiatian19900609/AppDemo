@@ -5,9 +5,21 @@
               android:orientation="vertical"
               android:padding="@dimen/zy_dimen_5">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_e82c2c">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="@dimen/zy_dimen_100"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="show"/>
+    </LinearLayout>
+
     <com.xinfu.demo17.TimingView
         android:id="@+id/timeview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
 </LinearLayout>

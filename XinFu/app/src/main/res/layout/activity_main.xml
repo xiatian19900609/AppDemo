@@ -135,6 +135,30 @@
                 android:layout_height="wrap_content"
                 android:text="雷达图"/>
 
+            <Button
+                android:id="@+id/btn21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="三色比例进度条"/>
+
+            <Button
+                android:id="@+id/btn22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分组list"/>
+
+            <Button
+                android:id="@+id/btn23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11111"/>
+
+            <Button
+                android:id="@+id/btn24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="indicator"/>
+
             <TextView
                 android:id="@+id/tv"
                 android:layout_width="wrap_content"
